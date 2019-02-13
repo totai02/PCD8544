@@ -49,7 +49,7 @@ Lesser General Public License for more details.
 #define PCD8544_SETBIAS 0x10
 #define PCD8544_SETVOP 0x80
 
-#define swap(a, b) { uint8_t t = a; a = b; b = t; }
+#define swapNumber(a, b) { uint8_t t = a; a = b; b = t; }
 
  // calibrate clock constants
 #define CLKCONST_1  8000

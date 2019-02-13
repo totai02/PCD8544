@@ -545,14 +545,14 @@ void LCDdrawline(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, uint8_t color)
 	uint8_t steep = abs(y1 - y0) > abs(x1 - x0);
 	if (steep)
 	{
-		swap(x0, y0);
-		swap(x1, y1);
+		swapNumber(x0, y0);
+		swapNumber(x1, y1);
 	}
 
 	if (x0 > x1)
 	{
-		swap(x0, x1);
-		swap(y0, y1);
+		swapNumber(x0, x1);
+		swapNumber(y0, y1);
 	}
 
 	// much faster to put the test here, since we've already sorted the points
