@@ -60,6 +60,7 @@ Lesser General Public License for more details.
 #define MSBFIRST  1
 
  void LCDInit(uint8_t SCLK, uint8_t DIN, uint8_t DC, uint8_t CS, uint8_t RST, uint8_t contrast);
+ void LCDInit();
  void LCDcommand(uint8_t c);
  void LCDdata(uint8_t c);
  void LCDsetContrast(uint8_t val);

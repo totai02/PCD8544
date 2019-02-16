@@ -440,6 +440,16 @@ void LCDInit(uint8_t SCLK, uint8_t DIN, uint8_t DC, uint8_t CS, uint8_t RST, uin
 
 }
 
+void LCDInit()
+{
+	LCDInit(14, 12, 4, 10, 5, 60);
+}
+
+void LCDsetTextColor(uint8_t c)
+{
+	textcolor = c;
+}
+
 void LCDdrawbitmap(uint8_t x, uint8_t y,const uint8_t *bitmap, uint8_t w, uint8_t h,uint8_t color)
 {
 	uint8_t j,i;
@@ -494,17 +504,17 @@ void LCDdrawchar(uint8_t x, uint8_t y, char c)
 			{
 				my_setpixel(x+i, y+j, textcolor);
 			}
-			else
-			{
-				my_setpixel(x+i, y+j, !textcolor);
-			}
+			//else
+			//{
+				//my_setpixel(x+i, y+j, !textcolor);
+			//}
 		}
 	}
 
-	for ( j = 0; j<8; j++)
-	{
-		my_setpixel(x+5, y+j, !textcolor);
-	}
+	//for ( j = 0; j<8; j++)
+	//{
+		//my_setpixel(x+5, y+j, !textcolor);
+	//}
 	updateBoundingBox(x, y, x+5, y + 8);
 }
 
