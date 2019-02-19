@@ -74,7 +74,7 @@ Lesser General Public License for more details.
  void LCDfillrect(uint8_t x, uint8_t y, uint8_t w, uint8_t h,uint8_t color);
  void LCDdrawline(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, uint8_t color);
  void LCDsetCursor(uint8_t x, uint8_t y);
- void LCDsetTextSize(uint8_t s);
+ void LCDsetTinyFont(uint8_t s);
  void LCDsetTextColor(uint8_t c);
  void LCDwrite(uint8_t c);
  void LCDshowLogo();
